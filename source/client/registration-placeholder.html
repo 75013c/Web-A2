@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Defines the character encoding used by the page -->
+    <meta charset="utf-8">
+
+    <!-- Makes the page responsive on different screen sizes -->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <!-- Sets the title shown in the browser tab -->
+    <title>Registration | Bright Path</title>
+
+    <!-- Defines the website favicon -->
+    <link rel="icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+
+    <!-- Defines the image used when the page is shared -->
+    <meta property="og:image" content="/assets/og.jpg">
+
+    <!-- Loads the shared, event page and theme stylesheets -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/event.css">
+    <link rel="stylesheet" href="css/theme-d-scholarship.css">
+</head>
+
+<body>
+    <!-- Allows keyboard users to skip directly to the main content -->
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <!-- Contains the website header and main navigation -->
+    <header class="site-header">
+        <nav class="nav container" aria-label="Main navigation">
+            <!-- Website logo and link to the home page -->
+            <a class="brand" href="index.html">
+                <span class="brand-mark">
+                    <img src="/assets/logo.svg" alt="" width="160" height="40">
+                </span>
+                Bright Path
+            </a>
+        </nav>
+    </header>
+
+    <!-- Contains the selected event registration summary -->
+    <main id="main" class="program-confirm">
+        <!-- JavaScript will place the event information inside this container -->
+        <div class="container" id="registration-summary">
+            <!-- Temporary message shown while the event data is loading -->
+            <div class="state">Loading event…</div>
+        </div>
+    </main>
+
+    <!-- Loads shared JavaScript functions -->
+    <script src="js/app.js"></script>
+
+    <script>
+        // Runs the code after the HTML document has finished loading
+        document.addEventListener('DOMContentLoaded', async () => {
+            // Reads the event ID from the URL and selects the summary container
+            const id = new URLSearchParams(location.search).get('id'), root = document.querySelector('#registration-summary');
+
+            // Displays an error message when the URL does not contain an event ID
+            if (!id) return showState(root, 'Event ID is missing.');
+
+            try {
+                // Requests the selected event from the API
+                const event = await api('/api/events/' + encodeURIComponent(id));
+
+                // Displays the event title, image, date, location and back link
+                root.innerHTML = '<span class="eyebrow">Registration</span><h1>' + event.title + '</h1>' + (event.image ? '<img class="summary-media" src="/assets/' + encodeURIComponent(event.image) + '" alt="">' : '') + '<p>' + event.date + ' · ' + event.location + '</p><p><a class="button secondary" href="event.html?id=' + event.id + '">Back to event</a></p>'
+            } catch {
+                // Displays an error message if the event request fails
+                showState(root, 'Event information could not load.')
+            }
+        })
+    </script>
+</body>
+
+</html>

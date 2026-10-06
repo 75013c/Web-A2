@@ -1,0 +1,138 @@
+<html lang="en">
+
+<head>
+    <!-- Defines the character encoding used by the page -->
+    <meta charset="utf-8">
+
+    <!-- Makes the page responsive on different screen sizes -->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <!-- Sets the title shown in the browser tab -->
+    <title>Bright Path | Scholarship and school support</title>
+
+    <!-- Defines the website favicon -->
+    <link rel="icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+
+    <!-- Defines the image used when the page is shared -->
+    <meta property="og:image" content="/assets/og.jpg">
+
+    <!-- Loads the shared, home page and theme stylesheets -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/theme-d-scholarship.css">
+</head>
+
+<body>
+    <!-- Allows keyboard users to skip directly to the main content -->
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <!-- Contains the website header and main navigation -->
+    <header class="site-header">
+        <nav class="nav container" aria-label="Main navigation">
+            <!-- Website logo and link to the home page -->
+            <a class="brand" href="index.html">
+                <span class="brand-mark">
+                    <img src="/assets/logo.svg" alt="" width="160" height="40">
+                </span>
+                Bright Path
+            </a>
+
+            <!-- Navigation links to the programme search page -->
+            <div class="nav-links">
+                <a href="search.html">Scholarship support</a>
+                <a class="button" href="search.html">Take action</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contains the main content of the home page -->
+    <main id="main">
+
+        <!-- Introduces the website and provides programme links -->
+        <section class="plan">
+            <div class="container plan-grid">
+
+                <!-- Main introduction and action buttons -->
+                <div class="plan-copy">
+                    <span class="eyebrow">Scholarship and school support</span>
+                    <h1>Open a brighter path</h1>
+                    <p>
+                        Read the plan, pick a term and join a programme that keeps learners in school. Every entry below
+                        is a real, local opportunity.
+                    </p>
+
+                    <!-- Links to the search page and featured programme section -->
+                    <div class="plan-actions">
+                        <a class="button" href="search.html">Explore programmes</a>
+                        <a class="button secondary" href="#catalogue">Browse the catalogue</a>
+                    </div>
+                </div>
+
+                <!-- Provides quick links to selected programme categories -->
+                <ol class="plan-index">
+                    <li>
+                        <a href="search.html?category=Scholarship">
+                            <span>01</span>Scholarship clinics
+                        </a>
+                    </li>
+                    <li>
+                        <a href="search.html?category=Supplies">
+                            <span>02</span>School supply packing
+                        </a>
+                    </li>
+                    <li>
+                        <a href="search.html?category=Tutoring">
+                            <span>03</span>Family learning planning
+                        </a>
+                    </li>
+                </ol>
+
+                <!-- Displays the main image for the introduction section -->
+                <div class="plan-media">
+                    <img src="/assets/L-01.jpg"
+                        alt="Rural school opening day with students and teachers" width="1600" height="900">
+                </div>
+            </div>
+        </section>
+
+        <!-- Contains the featured programmes loaded from the API -->
+        <section class="page-section" id="catalogue">
+            <div class="container">
+
+                <!-- Featured programme section heading -->
+                <div class="section-heading">
+                    <div>
+                        <span class="eyebrow">Course catalogue</span>
+                        <h2>Featured programmes</h2>
+                    </div>
+
+                    <!-- Link to view all available programmes -->
+                    <a href="search.html">See all</a>
+                </div>
+
+                <!-- JavaScript will place the featured programmes inside this container -->
+                <div id="featured-events" class="catalogue-list" aria-live="polite">
+                    <!-- Temporary message shown while programme data is loading -->
+                    <div class="state">Loading programmes…</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Contains the website footer -->
+    <footer class="page-section">
+        <div class="container">
+            <strong>Bright Path</strong>
+            <p>Scholarship and school support through open, local action.</p>
+        </div>
+    </footer>
+
+    <!-- Loads shared JavaScript functions -->
+    <script src="js/app.js"></script>
+
+    <!-- Loads the JavaScript used to request and display featured programmes -->
+    <script src="js/home.js"></script>
+</body>
+
+</html>

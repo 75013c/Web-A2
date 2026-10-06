@@ -1,0 +1,26 @@
+/* Bright Path A2-1: reading-led editorial page */
+.site-header {
+  background: #f1f5ef;
+  border-bottom: 1px solid #cfd8cf;
+}
+.brand {
+  color: #17564a;
+  font-family: Georgia, "Times New Roman", serif;
+  letter-spacing: 0.04em;
+}
+.eyebrow {
+  color: #17564a;
+}
+.button {
+  border-radius: 3px;
+  background: #17564a;
+}
+.button.secondary {
+  background: #e8c25a;
+  color: #17564a;
+}
+.status {
+  border-radius: 3px;
+  background: #e8efe5;
+  color: #17564a;
+}

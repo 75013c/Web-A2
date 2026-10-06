@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Defines the character encoding used by the page -->
+    <meta charset="utf-8">
+
+    <!-- Makes the page responsive on different screen sizes -->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <!-- Sets the title shown in the browser tab -->
+    <title>Event details | Bright Path</title>
+
+    <!-- Defines the website favicon -->
+    <link rel="icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+
+    <!-- Defines the image used when the page is shared -->
+    <meta property="og:image" content="/assets/og.jpg">
+
+    <!-- Loads the shared, page-specific and theme stylesheets -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/event.css">
+    <link rel="stylesheet" href="css/theme-d-scholarship.css">
+</head>
+
+<body>
+    <!-- Allows keyboard users to skip directly to the main content -->
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <!-- Contains the website header and main navigation -->
+    <header class="site-header">
+        <nav class="nav container" aria-label="Main navigation">
+            <!-- Website logo and link to the home page -->
+            <a class="brand" href="index.html">
+                <span class="brand-mark">
+                    <img src="/assets/logo.svg" alt="" width="160" height="40">
+                </span>
+                Bright Path
+            </a>
+
+            <!-- Link to the page that lists all events -->
+            <div class="nav-links">
+                <a href="search.html">All events</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main content area for the event details -->
+    <main id="main" class="program-page">
+        <!-- JavaScript will place the event information inside this container -->
+        <div class="container" id="event-detail">
+            <!-- Temporary message shown while the event data is loading -->
+            <div class="state">Loading event…</div>
+        </div>
+    </main>
+
+    <!-- Loads shared JavaScript functions -->
+    <script src="js/app.js"></script>
+
+    <!-- Loads the JavaScript used to request and display event details -->
+    <script src="js/event.js"></script>
+</body>
+
+</html>

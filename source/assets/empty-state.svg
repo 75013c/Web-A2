@@ -1,0 +1,8 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="640" height="480" viewBox="0 0 640 480" role="img" aria-label="No results found">
+  <title>No results found</title>
+  <rect width="640" height="480" fill="#e8c25a" opacity="0.45"/>
+  <circle cx="320" cy="196" r="88" fill="#ffffff" opacity="0.92"/>
+  <g transform="translate(288,164) scale(2.6667)" fill="none" stroke="#1f6f5c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></g>
+  <rect x="216" y="322" width="208" height="14" rx="7" fill="#1f6f5c" opacity="0.38"/>
+  <rect x="256" y="354" width="128" height="12" rx="6" fill="#1f6f5c" opacity="0.22"/>
+</svg>
